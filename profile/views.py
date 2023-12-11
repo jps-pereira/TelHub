@@ -2302,8 +2302,8 @@ def activityPageTabProfile(request,user_id,username):
     }
     return render(request, 'profile/UserProfile_Profile_ActivityTab.html', context)
 
-
 def developerStoryTab(request, user_id):
+    profileData = get_object_or_404(Profile, pk=user_id)
     profileStory = get_object_or_404(Profile, user=profileData.user)
 
     context = {'profileStory':profileStory}
@@ -2333,6 +2333,7 @@ def uploadPosition(request, user_id):
 def addPositionAjax(request,user_id):
     # data = get_object_or_404(Question, pk=question_id)
     # request should be ajax and method should be POST.
+    form = PositionCreateForm()
     if is_ajax(request) and request.method == "POST":
         # get the form data
         edit_Q_Form = PositionCreateForm(request.POST, request.FILES)
@@ -3040,7 +3041,7 @@ def userProfileJonPrefrences_Settings(request, user_id):
                                  instance=request.user.profile)
 
         if editProfile_Job.is_valid():
-            # custom_form = editProfile_Job.save(commit=False)
+            custom_form = editProfile_Job.save(commit=False)
             custom_form.save()
 
             # messages.success(request, "Profile Saved")

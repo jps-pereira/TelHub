@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'help',
     'taggit',
     'crispy_forms',
+    'crispy_bootstrap4',
     'martor',
     'simple_history',
     # 'background_task',

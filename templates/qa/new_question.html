@@ -60,12 +60,12 @@
                         </div>
                     </div>
 
-
       <div id="post-editor" class="post-editor js-post-editor mt0 mb16">
               <div class="ps-relative">
                       <label class="s-label mb4 d-block" for="wmd-input">Body
                               <p class="s-description mt2">Include all the information someone would need to answer your question</p>
                       </label>
+                  {% csrf_token %}
                   <div class="wmd-container mb8">
                       <div class="js-stacks-validation">
                           <div class="ps-relative">

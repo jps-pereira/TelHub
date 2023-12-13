@@ -2,6 +2,7 @@ from pathlib import Path
 import os
 import django_heroku
 from django.conf import settings
+import time
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -240,6 +241,26 @@ MARTOR_TOOLBAR_BUTTONS = [
     'link', 'image-link', 'image-upload', 'emoji',
     'direct-mention', 'toggle-maximize', 'help'
 ]
+
+
+
+#MARTOR_IMGUR_CLIENT_ID = 'your-client-id'
+#MARTOR_IMGUR_API_KEY   = 'your-api-key'
+#MARTOR_UPLOAD_PATH = 'images/uploads/{}'.format(time.strftime("%Y/%m/%d/"))
+#MARTOR_UPLOAD_URL = '/martor/uploader/' 
+
+
+# Maximum Upload Image
+# 2.5MB - 2621440
+# 5MB - 5242880
+# 10MB - 10485760
+# 20MB - 20971520
+# 50MB - 5242880
+# 100MB 104857600
+# 250MB - 214958080
+# 500MB - 429916160
+
+#MAX_IMAGE_UPLOAD_SIZE = 5242880  # 5MB
 
 CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
 

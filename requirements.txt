@@ -58,7 +58,6 @@ pystache
 pytest
 python-slugify
 pytz
-pywin32
 redis
 regex
 requests

@@ -2,7 +2,11 @@ from pathlib import Path
 import os
 import django_heroku
 from django.conf import settings
-import time
+import dj_database_url
+
+DATABASES = {
+    'default': dj_database_url()
+}
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -131,12 +135,12 @@ WSGI_APPLICATION = 'main.wsgi.application'
 If you don't want to use postgresql then remove comment of sqlite's configuration and
 comment in the postgresql configuration
 """
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+#}
 
 # DATABASES = {
 #     'default': {

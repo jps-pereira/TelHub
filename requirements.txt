@@ -14,7 +14,7 @@ css==0.1
 distlib==0.3.7
 dj-database-url==2.1.0
 dj-static==0.0.6
-Django==5.0
+Django
 django-adminactions==2.3.0
 django-bootstrap-v5==1.0.11
 django-ckeditor==6.7.0

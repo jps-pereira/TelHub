@@ -23,7 +23,7 @@ django-taggit==1.5.1
 djangorestframework==3.12.4
 gunicorn==20.1.0
 humanize==3.11.0
-idna==3.2
+idna==3.7
 importlib-metadata==4.8.1
 iniconfig==1.1.1
 Markdown==3.3.4
